@@ -1,0 +1,51 @@
+# macOS / iCloud
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Claude Code per-user config (contains local paths / personal permission grants)
+# The whole .claude/ dir is local state in the source repo—project-level hooks/settings go in the user's own content project, not here
+.claude/
+
+# Python (left over from the whisper adapter / score-curve.py runs)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.python-version
+
+# User project data (in case a developer ran cheat-init in the cheat-on-content source dir)
+# These files should live in the user's own content project, not pollute the source repo
+.cheat-state.json
+.cheat-cache/
+.cheat-hooks/
+.cheat-secrets.json
+predictions/
+videos/
+scripts/
+samples/
+candidates.md
+rubric_notes.md
+script_patterns.md
+benchmark.md
+STATUS.md
+WORKFLOW.md
+content.db
+
+# left over from adapter runs
+.auth/
+.debug/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# temp files
+*.tmp
+*.log

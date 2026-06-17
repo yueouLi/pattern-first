@@ -1,0 +1,56 @@
+{
+  "_comment": "Reference JSON shape for a candidate item. See shared-references/candidate-schema.md for full spec. Adapter implementations (in adapters/) emit arrays of items conforming to this shape. The user-visible storage is candidates.md (markdown) — JSON is only used in machine-to-machine transit (e.g. md-to-sqlite migration, trend-source adapter output).",
+  "candidates": [
+    {
+      "id": "e7c2f1a4d3b6",
+      "title": "the high-density family system of \"for your own good\"",
+      "source": "pool:manual",
+      "snapshot_text": "\"For your own good\" is Chinese families' highest-tier rhetoric of controlling their children, backed by a whole cognitive system of \"I understand your needs better than you do\".",
+      "snapshot_at": "2026-05-01T10:00:00+08:00",
+      "url": null,
+      "tier": "tier1",
+      "read_status": "deep_read",
+      "category": "family",
+      "composite_score": 9.18,
+      "dimension_scores": {"ER": 5, "HP": 5, "QL": 4, "NA": 4, "AB": 5, "SR": 5, "SAT": 4},
+      "scored_under_rubric_version": "v2",
+      "predicted_bucket": "300k-1M",
+      "predicted_reason": "ER+SR both 5 top-tier, the high-density family issue is universal and safe to share",
+      "note": "heavy issue, not suitable for 2 such pieces in a row"
+    },
+    {
+      "id": "229f5798b1d8",
+      "title": "the length of \"haha\"",
+      "source": "pool:manual",
+      "snapshot_text": "A study of the nonlinear relationship between \"haha\" length and willingness to communicate in social media.",
+      "snapshot_at": "2026-05-03T09:00:00+08:00",
+      "url": null,
+      "tier": "tier1",
+      "read_status": "deep_read",
+      "category": "social",
+      "composite_score": 8.71,
+      "dimension_scores": {"ER": 3, "HP": 5, "QL": 5, "NA": 4, "AB": 5, "SR": 4, "SAT": 5},
+      "scored_under_rubric_version": "v2",
+      "predicted_bucket": "300k-1M",
+      "predicted_reason": "v2.1 candidate dimensions MS+TS both 5—the key A/B verification sample for the v2.1 upgrade",
+      "note": ""
+    },
+    {
+      "id": "8c4d92e1f0b3",
+      "title": "Show HN: I built a tool that predicts whether your video will go viral",
+      "source": "trend:hackernews",
+      "snapshot_text": "Built over a weekend. Uses a simple multidimensional rubric calibrated against creator's own historical data. Curious what the HN crowd thinks of the methodology.",
+      "snapshot_at": "2026-05-04T09:15:00+08:00",
+      "url": "https://news.ycombinator.com/item?id=12345678",
+      "tier": null,
+      "read_status": "unread",
+      "category": "tech-meta",
+      "composite_score": null,
+      "dimension_scores": null,
+      "scored_under_rubric_version": null,
+      "predicted_bucket": null,
+      "predicted_reason": null,
+      "note": ""
+    }
+  ]
+}
