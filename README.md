@@ -1,8 +1,8 @@
 <h1 align="center">
-  <img src="docs/logo.svg" alt="Cheat on Content" width="720">
+  <img src="docs/logo.svg" alt="Pattern First" width="720">
 </h1>
 
-<h2 align="center">Cheat on Content</h2>
+<h2 align="center">Pattern First</h2>
 
 <p align="center">
 For content creators — a skill that turns every post into a calibrated experiment.
@@ -31,7 +31,7 @@ Most creators live in the same gambling loop:
 
 A creator who's shipped 200 pieces is barely 10% sharper than someone who's shipped 1 — because they never **kept books** after each round.
 
-**Cheat on Content** makes every judgment get logged, retrospected, absorbed into the next:
+**Pattern First** makes every judgment get logged, retrospected, absorbed into the next:
 
 📊 Score → 🎯 Blind-predict → 🚀 Publish → 📈 T+3d retro → 🧬 Evolve your rubric
 
@@ -101,8 +101,8 @@ General LLMs help everyone. This helps **your** account.
 ## 📦 Install
 
 ```bash
-git clone https://github.com/yueouLi/cheat-on-content-en.git
-cd cheat-on-content-en
+git clone https://github.com/yueouLi/pattern-first.git
+cd pattern-first
 bash install.sh
 ```
 
@@ -123,7 +123,7 @@ bash install.sh
 In your content project directory, open a skill-compatible agent and say:
 
 ```
-init cheat-on-content
+init pattern-first
 ```
 
 (or just: `init`)
@@ -151,8 +151,8 @@ Full workflow + sub-skill details: see [SKILL.md](SKILL.md).
 
 ## 📈 Star History
 
-<a href="https://star-history.com/#yueouLi/cheat-on-content-en&Date">
-  <img src="https://api.star-history.com/svg?repos=yueouLi/cheat-on-content-en&type=Date" alt="Star History Chart" width="720">
+<a href="https://star-history.com/#yueouLi/pattern-first&Date">
+  <img src="https://api.star-history.com/svg?repos=yueouLi/pattern-first&type=Date" alt="Star History Chart" width="720">
 </a>
 
 ---

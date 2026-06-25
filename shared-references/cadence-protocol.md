@@ -184,9 +184,9 @@ Or:
 
 ---
 
-## Key difference: cheat-on-content vs the video-analysis project
+## Key difference: pattern-first vs the video-analysis project
 
-| Dimension | Video analysis | cheat-on-content |
+| Dimension | Video analysis | pattern-first |
 |---|---|---|
 | Cadence source | default daily (hardcoded in CADENCE.md) | user-filled (cheat-init asks, 4 tiers: daily/every-other-day/weekly/flexible) |
 | Buffer thresholds | 0/1/2/3-5/6+ (by "piece") | 0/1-2/3-5/>5 (by "buffer_days"—derived from the user's cadence) |

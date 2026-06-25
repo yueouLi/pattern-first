@@ -112,7 +112,7 @@ adapters/script-extraction/whisper/
 
 ## Relationship with other adapters
 
-- Like `adapters/perf-data/douyin-session/` and `adapters/trend-sources/*`, it's an optional cheat-on-content adapter
+- Like `adapters/perf-data/douyin-session/` and `adapters/trend-sources/*`, it's an optional pattern-first adapter
 - Only called at `/cheat-learn-from --way b`—Way a (paste text) doesn't need it
 
 ## Note on the user downloading videos themselves

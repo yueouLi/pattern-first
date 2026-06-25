@@ -1,6 +1,6 @@
 ---
 name: cheat-init
-description: The first-time onboarding and scaffolding creator for cheat-on-content. Unified flow—all users go through the same 5-phase loop; the only difference is that someone "who has published videos" gets one extra step at init: fetching existing videos to build historical context (used later by cheat-seed for more tailored topics and a more accurate baseline). Triggers: "init" / "first use" / "I'm a new user" / "setup cheat-on-content". **Must run on the user's first session; other sub-skills auto-route here when .cheat-state.json doesn't exist.**
+description: The first-time onboarding and scaffolding creator for pattern-first. Unified flow—all users go through the same 5-phase loop; the only difference is that someone "who has published videos" gets one extra step at init: fetching existing videos to build historical context (used later by cheat-seed for more tailored topics and a more accurate baseline). Triggers: "init" / "first use" / "I'm a new user" / "setup pattern-first". **Must run on the user's first session; other sub-skills auto-route here when .cheat-state.json doesn't exist.**
 argument-hint: [— form: opinion-video|long-essay|short-text|podcast]
 allowed-tools: Bash(*), Read, Write, Edit, Glob, WebFetch, Skill
 ---
@@ -45,7 +45,7 @@ None. All info is collected from the 6 conversation questions.
 
 ### Phase 0: detect current state
 
-1. Read the user's current working directory (**the user's content project, not cheat-on-content itself**)
+1. Read the user's current working directory (**the user's content project, not pattern-first itself**)
 2. Check whether `.cheat-state.json` already exists:
    - exists → prompt "the project seems already initialized (state file exists). Re-initializing will overwrite the existing config—confirm?" Only continue after the user explicitly confirms
    - doesn't exist → proceed to Phase 1
@@ -56,7 +56,7 @@ None. All info is collected from the 6 conversation questions.
 Output to the user (verbatim, don't soften):
 
 ```
-🎯 Cheat on Content — initialization
+🎯 Pattern First — initialization
 
 Your next piece is already rewriting the you of 3 months from now.
 The pattern objectively exists; the difference is whether you **see** it or not.
@@ -318,7 +318,7 @@ Create in order and **explain each item's purpose**:
     it can only contain generic language (formula / dimension definitions / bucket boundaries), not real video names / actuals.
     The Memo at each bump upgrade (with evidence data + derived evidence) goes into rubric-memo.md (created next step)."
    ```
-   - Copy `cheat-on-content/starter-rubrics/<form>-zero.md` (cold-start) or `<form>.md` (still usable as a reference when you have data)
+   - Copy `pattern-first/starter-rubrics/<form>-zero.md` (cold-start) or `<form>.md` (still usable as a reference when you have data)
 
 2.5. **`rubric-memo.md`** (**new**—to support the cheat-score-blind isolation protocol)
    ```
@@ -331,7 +331,7 @@ Create in order and **explain each item's purpose**:
 
     It's empty now, waiting to append the first Memo after the first cheat-bump upgrade."
    ```
-   - Copy `cheat-on-content/templates/rubric-memo.template.md` → `<user-repo>/rubric-memo.md`
+   - Copy `pattern-first/templates/rubric-memo.template.md` → `<user-repo>/rubric-memo.md`
 
 3. **`script_patterns.md`**
    ```
@@ -339,7 +339,7 @@ Create in order and **explain each item's purpose**:
     rubric_notes.md teaches Claude how to score;
     script_patterns.md teaches Claude how to write."
    ```
-   - Copy `cheat-on-content/templates/script_patterns.template.md`
+   - Copy `pattern-first/templates/script_patterns.template.md`
 
 4. **Four directories**: `scripts/` + `predictions/` + `videos/` + `samples/` (all with `.gitkeep`)
    ```
@@ -361,7 +361,7 @@ Create in order and **explain each item's purpose**:
     Early on the tool derives a lot of its rubric / pattern / topic direction from here;
     later after N≥10 the influence fades, but it's kept as a sanity check."
    ```
-   - Copy `cheat-on-content/templates/benchmark.template.md` → `<user-repo>/benchmark.md`
+   - Copy `pattern-first/templates/benchmark.template.md` → `<user-repo>/benchmark.md`
    - **Phase 2.5 choosing c doesn't create it** → benchmark.md doesn't exist, state marks `benchmark_status: none`
 
 5. **`WORKFLOW.md`** + **`STATUS.md`**

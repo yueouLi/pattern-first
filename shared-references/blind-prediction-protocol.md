@@ -130,7 +130,7 @@ The main SKILL.md:
 
 ## Why (why is this so strict)
 
-Blind prediction is the **only signal source** of the entire cheat-on-content calibration loop. Once the prediction section is modified after the fact, all "which dimension was validated / refuted" judgments lose their baseline—you don't know whether you originally predicted right, or fixed it right after the fact.
+Blind prediction is the **only signal source** of the entire pattern-first calibration loop. Once the prediction section is modified after the fact, all "which dimension was validated / refuted" judgments lose their baseline—you don't know whether you originally predicted right, or fixed it right after the fact.
 
 Calibration value = prediction precision × prediction credibility.
 - Prediction precision can be slowly improved via rubric upgrades.

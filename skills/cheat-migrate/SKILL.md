@@ -7,7 +7,7 @@ allowed-tools: Bash(*), Read, Write, Edit, Skill
 
 # /cheat-migrate — schema version migration
 
-Upgrade the user's `.cheat-state.json` from an old `schema_version` to the `LATEST_SCHEMA` that cheat-on-content currently expects.
+Upgrade the user's `.cheat-state.json` from an old `schema_version` to the `LATEST_SCHEMA` that pattern-first currently expects.
 
 ---
 

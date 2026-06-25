@@ -1,11 +1,11 @@
 # Scoring calibration notes
 
-> **This file is the carrier of cheat-on-content's scoring-rule evolution.** After each retro comparing actual plays vs predicted scores, write the judgment basis and laws explicitly here; before scoring next time, `/cheat-score` `/cheat-predict` read this file first.
+> **This file is the carrier of pattern-first's scoring-rule evolution.** After each retro comparing actual plays vs predicted scores, write the judgment basis and laws explicitly here; before scoring next time, `/cheat-score` `/cheat-predict` read this file first.
 >
 > **Core principle**: laws must be traceable to specific samples. Don't write empty words like "emotional resonance is important"; write "piece XX's ER=5 was validated / refuted, because the top 3 comments were all the YY pattern".
 >
-> Full lifecycle protocol: [shared-references/observation-lifecycle.md](../cheat-on-content/shared-references/observation-lifecycle.md).
-> Upgrade flow: [shared-references/bump-validation-protocol.md](../cheat-on-content/shared-references/bump-validation-protocol.md).
+> Full lifecycle protocol: [shared-references/observation-lifecycle.md](../pattern-first/shared-references/observation-lifecycle.md).
+> Upgrade flow: [shared-references/bump-validation-protocol.md](../pattern-first/shared-references/bump-validation-protocol.md).
 
 ---
 
@@ -33,7 +33,7 @@ _Only a structural change bumps the version number; pure observation accumulatio
 ## Current scoring dimensions (0-5)
 
 > **Example: the table below is the tested v2 formula of the "video analysis" project (a Chinese opinion-video creator, 25+ published samples).
-> Cold-start users should start equal-weight—see [opinion-video-zero.md](../cheat-on-content/starter-rubrics/opinion-video-zero.md).
+> Cold-start users should start equal-weight—see [opinion-video-zero.md](../pattern-first/starter-rubrics/opinion-video-zero.md).
 > After calibrating 5 pieces, decide whether to replace this table with your own fitted version.**
 
 | Dimension | Weight | Meaning | Typical signal |
@@ -73,7 +73,7 @@ composite = (ER×1.5 + SR×1.5 + HP×1.5 + QL + NA + AB + SAT) / 8.5 × 2.0
 > - See: [predictions/<file>.md]
 > ```
 >
-> Deletion rules: see [shared-references/observation-lifecycle.md](../cheat-on-content/shared-references/observation-lifecycle.md): absorbed into a dimension → delete; refuted → delete. git history is the archive.
+> Deletion rules: see [shared-references/observation-lifecycle.md](../pattern-first/shared-references/observation-lifecycle.md): absorbed into a dimension → delete; refuted → delete. git history is the archive.
 
 ### Example entry (from the video-analysis project, for reference only; your project's real entries start accumulating after retros)
 
@@ -165,7 +165,7 @@ composite = (ER×1.5 + SR×1.5 + HP×1.5 + QL + NA + AB + SAT) / 8.5 × 2.0
 | small breakout | 3 - 10 × baseline | significant breakout |
 | big breakout | > 10 × baseline | magnitude jump |
 
-See the "ratio-bucket scheme" section of [starter-rubrics/opinion-video-zero.md](../cheat-on-content/starter-rubrics/opinion-video-zero.md).
+See the "ratio-bucket scheme" section of [starter-rubrics/opinion-video-zero.md](../pattern-first/starter-rubrics/opinion-video-zero.md).
 
 ### Stage 2: after N=5, switch to fixed absolute buckets (with ratio backup)
 

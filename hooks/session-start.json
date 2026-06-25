@@ -1,5 +1,5 @@
 {
-  "_comment": "cheat-on-content SessionStart hook. Auto-renders 4-6 line status report at every new conversation. Synchronous so the report appears in Claude's context BEFORE first reply. Silently exits if not in a cheat-on-content project (no .cheat-state.json found).",
+  "_comment": "pattern-first SessionStart hook. Auto-renders 4-6 line status report at every new conversation. Synchronous so the report appears in Claude's context BEFORE first reply. Silently exits if not in a pattern-first project (no .cheat-state.json found).",
   "hooks": {
     "SessionStart": [
       {

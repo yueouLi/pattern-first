@@ -10,7 +10,7 @@ Referenced by all sub-skills. `.cheat-state.json` is the **single source of trut
 <user-content-project>/.cheat-state.json
 ```
 
-**Never** put it in the global `~/.claude/` or in cheat-on-content's own directory—one user may maintain multiple content projects, each with independent state.
+**Never** put it in the global `~/.claude/` or in pattern-first's own directory—one user may maintain multiple content projects, each with independent state.
 
 ---
 
@@ -107,7 +107,7 @@ Reason: a hard mode switch is the designer's guess, not how the UX should be. A 
 | Field | Type | Writer | Reader | Note |
 |---|---|---|---|---|
 | `schema_version` | string | cheat-init / cheat-migrate | all skills | "1.1". Bumped on schema upgrade; existing users upgrade via [/cheat-migrate](../skills/cheat-migrate/SKILL.md). See [migration-protocol.md](migration-protocol.md) |
-| `skill_version` | string | cheat-init | all skills | the current cheat-on-content version |
+| `skill_version` | string | cheat-init | all skills | the current pattern-first version |
 | `initialized_at` | ISO 8601 | cheat-init | cheat-status | first-init time, never changes |
 
 ### Mode and config

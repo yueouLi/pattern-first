@@ -1,11 +1,11 @@
 ---
-name: cheat-on-content
+name: pattern-first
 description: For any content creator who wants to turn "gut feeling" into calibrated predictions. **The methodology is universal**—the loop of score → blind-predict → T+3d retro → evolve the rubric applies to any content that can be quantified (plays / reads / listens / clicks). **The rubric is the content of the loop, not the loop itself**—currently ships with an opinion-video rubric (fitted from a reference creator's 25+ videos); other formats can bootstrap from this and bump the weights. **Strongly recommended: import a benchmark account** as an initial signal source (/cheat-learn-from). Triggers: "init" / "score this" / "start prediction" / "shipped" / "retro" / "bump rubric" / "recommend topics" / "fetch trends" / "status" / "find benchmark" / "learn from". **First-time use must run /cheat-init first.**
 argument-hint: [draft-path] [— mode: cold-start|calibration]
 allowed-tools: Bash(*), Read, Write, Edit, Grep, Glob, Skill, mcp__llm-chat__chat
 ---
 
-# Cheat on Content
+# Pattern First
 
 > 🎯 **The methodology is universal; the rubric currently ships in an opinion-video version**
 >
@@ -25,7 +25,7 @@ This file is the **master protocol + router**. The workflow for each phase lives
 
 Codex doesn't have Claude Code's slash-command harness. After installing into Codex, just trigger the same routing via natural language:
 
-- `init cheat-on-content` → read and execute `skills/cheat-init/SKILL.md`
+- `init pattern-first` → read and execute `skills/cheat-init/SKILL.md`
 - `score this scripts/foo.md` → read and execute `skills/cheat-score/SKILL.md`
 - `start prediction scripts/foo.md` → read and execute `skills/cheat-predict/SKILL.md`
 - `shot ...` / `shipped ...` / `retro ...` / `bump rubric` / `status` → read the corresponding `skills/cheat-*/SKILL.md`
@@ -127,7 +127,7 @@ The skill expects the user's project layout below. `/cheat-init` creates missing
 ### This skill package
 
 ```
-cheat-on-content/
+pattern-first/
 ├── SKILL.md                           # this file (master protocol + routing)
 ├── README.md                          # marketing front page
 ├── skills/                            # sub-skill collection

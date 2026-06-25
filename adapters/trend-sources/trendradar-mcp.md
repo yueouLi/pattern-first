@@ -8,7 +8,7 @@
 
 [TrendRadar](https://github.com/sansan0/TrendRadar) is a 57k-star Chinese trend-aggregation monitor (uses the newsnow API to pull multi-platform: Weibo / Zhihu / Douyin / Bilibili / Toutiao, etc.). It ships its own standalone MCP server `trendradar-mcp`, exposing 25+ tools.
 
-cheat-on-content treats it as one of the trend-sources adapters—once the user configures the MCP server, cheat-seed / cheat-trends can call it naturally.
+pattern-first treats it as one of the trend-sources adapters—once the user configures the MCP server, cheat-seed / cheat-trends can call it naturally.
 
 - **Multi-platform coverage**: Weibo / Zhihu / Douyin / Bilibili / Toutiao / 36kr / etc.
 - **AI-enhanced tools**: `analyze_topic_trend` gives a surge/decay verdict; `compare_periods` gives week-over-week; `analyze_sentiment` gives sentiment
@@ -18,7 +18,7 @@ cheat-on-content treats it as one of the trend-sources adapters—once the user 
 
 Refer to the [MCP config docs](https://github.com/sansan0/TrendRadar) in the TrendRadar repo. After install, the user's Claude Code `.claude/settings.json` contains the `mcp__trendradar__*` series of tools.
 
-cheat-on-content doesn't bundle TrendRadar—the user installs it themselves and manages the server resources.
+pattern-first doesn't bundle TrendRadar—the user installs it themselves and manages the server resources.
 
 ## Key tools cheat-seed / cheat-trends call
 
@@ -61,6 +61,6 @@ TrendRadar MCP returns JSON / markdown. After cheat-seed receives it:
 
 ## A note to the TrendRadar team
 
-If you're a TrendRadar maintainer seeing this adapter doc—thank you for building multi-platform aggregation as an MCP server. cheat-on-content is the "content-production-side downstream" of your project—users use TrendRadar to know what's happening, and use cheat-on-content to turn that into a calibrated content-prediction loop. Complementary, not a replacement.
+If you're a TrendRadar maintainer seeing this adapter doc—thank you for building multi-platform aggregation as an MCP server. pattern-first is the "content-production-side downstream" of your project—users use TrendRadar to know what's happening, and use pattern-first to turn that into a calibrated content-prediction loop. Complementary, not a replacement.
 
-Cross-links welcome: [github.com/yueouLi/cheat-on-content-en](https://github.com/yueouLi/cheat-on-content-en).
+Cross-links welcome: [github.com/yueouLi/pattern-first](https://github.com/yueouLi/pattern-first).

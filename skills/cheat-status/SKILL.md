@@ -1,6 +1,6 @@
 ---
 name: cheat-status
-description: The cheat-on-content status dashboard. Shows current mode / rubric version / calibration progress / pending retros / pool status / whether to upgrade to SQLite / whether to bump the rubric. **Callable anytime, side-effect-free.** Triggers: "status" / "dashboard" / "what should I do now" / "how's progress".
+description: The pattern-first status dashboard. Shows current mode / rubric version / calibration progress / pending retros / pool status / whether to upgrade to SQLite / whether to bump the rubric. **Callable anytime, side-effect-free.** Triggers: "status" / "dashboard" / "what should I do now" / "how's progress".
 allowed-tools: Bash(*), Read, Glob, Grep
 ---
 
@@ -102,7 +102,7 @@ Check item by item by priority (high → low):
 ### Phase 4: output the dashboard
 
 ```
-🎛️ cheat-on-content status (updated 2026-05-04 15:00)
+🎛️ pattern-first status (updated 2026-05-04 15:00)
 
 Content form: opinion-video / duration 3-5min / cadence: every other day
 Current rubric: v2 (last bump: 2026-04-22)

@@ -38,7 +38,7 @@ playwright install chromium
 # 5. scan-QR login to Douyin Creator Center the first time
 ADAPTER=$(find ~/.claude/skills -name "douyin-session" -type d 2>/dev/null | head -1)
 # if not found (the adapter may not be global), use the source path:
-# ADAPTER="$HOME/Desktop/cheat-test/cheat-on-content/adapters/perf-data/douyin-session"
+# ADAPTER="$HOME/Desktop/cheat-test/pattern-first/adapters/perf-data/douyin-session"
 python "$ADAPTER/crawler.py" login
 # → a Chromium window pops up, scan the QR to log into Creator Center
 # → after login the window auto-closes, the cookie is stored in current-dir/.auth/

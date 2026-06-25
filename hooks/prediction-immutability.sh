@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# cheat-on-content / prediction-immutability hook
+# pattern-first / prediction-immutability hook
 #
 # Wires PreToolUse(Edit|Write) → blocks any edit that touches the
 # '## Prediction' section of a file under predictions/.
@@ -27,9 +27,9 @@ set -uo pipefail
 
 # Single-shot bypass — opt-in, logs prominently
 if [[ "${CHEAT_BYPASS_IMMUTABILITY:-0}" == "1" ]]; then
-  echo "[cheat-on-content] ⚠️  IMMUTABILITY BYPASS active (CHEAT_BYPASS_IMMUTABILITY=1)" >&2
-  echo "[cheat-on-content] ⚠️  This should only be used for pure markdown-formatting fixes." >&2
-  echo "[cheat-on-content] ⚠️  Bypass will be visible in git history." >&2
+  echo "[pattern-first] ⚠️  IMMUTABILITY BYPASS active (CHEAT_BYPASS_IMMUTABILITY=1)" >&2
+  echo "[pattern-first] ⚠️  This should only be used for pure markdown-formatting fixes." >&2
+  echo "[pattern-first] ⚠️  Bypass will be visible in git history." >&2
   exit 0
 fi
 
@@ -113,10 +113,10 @@ if [[ "$tool_name" == "Edit" ]]; then
     rm -f "$pred_tmp"
     cat >&2 <<EOF
 
-[cheat-on-content] 🚫 BLOCKED: edit targets the '## Prediction' section of:
+[pattern-first] 🚫 BLOCKED: edit targets the '## Prediction' section of:
   $file_path
 
-This violates principle #1 of cheat-on-content: predictions are immutable.
+This violates principle #1 of pattern-first: predictions are immutable.
 Once written, the prediction section can never be modified — only the
 '## Retro' section can be appended to.
 
@@ -142,7 +142,7 @@ fi
 if [[ "$tool_name" == "Write" && -f "$file_path" ]]; then
   cat >&2 <<EOF
 
-[cheat-on-content] 🚫 BLOCKED: Write would overwrite an existing prediction file:
+[pattern-first] 🚫 BLOCKED: Write would overwrite an existing prediction file:
   $file_path
 
 Use Edit on the '## Retro' section to append retrospective content.

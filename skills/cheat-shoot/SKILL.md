@@ -100,7 +100,7 @@ c) Heavily changed, basically another piece → use the _redo flow:
 3. If the user didn't keep it (ad-libbed) → mark `script_lost`, write a placeholder file + warn "v2 re-judgment skipped—next time recommend keeping the script (even a voice-memo transcription)", proceed to Phase 4
 4. If provided: compute the diff
    ```bash
-   # Resolve the cheat-on-content source root (cheat-shoot is symlink-installed)
+   # Resolve the pattern-first source root (cheat-shoot is symlink-installed)
    SKILL_REAL="$(readlink -f ~/.claude/skills/cheat-shoot 2>/dev/null || readlink ~/.claude/skills/cheat-shoot 2>/dev/null)"
    if [[ -n "$SKILL_REAL" ]]; then
      REPO_ROOT="$(cd "$SKILL_REAL/../.." && pwd)"

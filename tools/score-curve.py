@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-score-curve.py — predict accuracy convergence chart for cheat-on-content.
+score-curve.py — predict accuracy convergence chart for pattern-first.
 
 Reads predictions/*.md (in the user's project), pairs each prediction's
 center-of-bucket estimate against actual plays from the retrospective section,

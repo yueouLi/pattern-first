@@ -3,7 +3,7 @@
 > **This template is auto-filled by `/cheat-predict`.**
 > All predictions use the unified format (7 components + a retro section)—the same for the first 5 pieces and the mature period, the only difference is the confidence level in the header.
 >
-> Full spec: see [shared-references/prediction-anatomy.md](../cheat-on-content/shared-references/prediction-anatomy.md).
+> Full spec: see [shared-references/prediction-anatomy.md](../pattern-first/shared-references/prediction-anatomy.md).
 >
 > The example data in the template is from the video-analysis project's "stop expecting" ([predictions/2026-04-24_ab61ed09_stop-expecting.md]).
 

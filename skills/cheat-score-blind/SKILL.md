@@ -14,7 +14,7 @@ argument-hint: <script-path> <rubric-notes-path>
 
 ## Why this exists (background that must never be cut)
 
-cheat-on-content's 7/9-dimension scoring was originally inline in the main conversation—but the main Claude has already seen:
+pattern-first's 7/9-dimension scoring was originally inline in the main conversation—but the main Claude has already seen:
 - the user conversation history (including incidentally-mentioned play counts / comments / emotions)
 - the actuals of published pieces
 - historical `predictions/*.md` with retro sections (**severe contamination**)

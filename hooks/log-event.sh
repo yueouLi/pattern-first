@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# cheat-on-content / meta-logging hook
+# pattern-first / meta-logging hook
 #
 # Passive event recorder. Writes one JSON line per event to
 # .cheat-cache/usage.jsonl in the project root. Never blocks (async fire-and-forget).

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# cheat-on-content / install.sh
+# pattern-first / install.sh
 #
 # Symlinks the 14 sub-skills into Claude Code and/or Codex skill directories so
 # agents can find them globally. Re-runnable safely (overwrite after confirmation).
@@ -41,7 +41,7 @@ SUB_SKILLS=(
 )
 
 CLAUDE_SKILLS=("${SUB_SKILLS[@]}")
-CODEX_SKILLS=(cheat-on-content "${SUB_SKILLS[@]}")
+CODEX_SKILLS=(pattern-first "${SUB_SKILLS[@]}")
 
 # Resolve the directory containing THIS script (the source root) — needed early for both modes
 SCRIPT_DIR="$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
@@ -62,7 +62,7 @@ if [[ "${1:-}" == "--reinstall-hooks" ]]; then
     exit 1
   fi
   if [[ ! -f "$PROJECT_DIR/.cheat-state.json" ]]; then
-    echo "❌ $PROJECT_DIR is not a cheat-on-content project (no .cheat-state.json)."
+    echo "❌ $PROJECT_DIR is not a pattern-first project (no .cheat-state.json)."
     echo "   Run /cheat-init in that directory first."
     exit 1
   fi
@@ -125,24 +125,24 @@ for arg in "$@"; do
   esac
 done
 
-# Sanity check: confirm we're in the cheat-on-content root
+# Sanity check: confirm we're in the pattern-first root
 if [[ ! -f "$SCRIPT_DIR/SKILL.md" ]]; then
   echo "❌ Missing: $SCRIPT_DIR/SKILL.md"
-  echo "   Are you running install.sh from the cheat-on-content root?"
+  echo "   Are you running install.sh from the pattern-first root?"
   exit 1
 fi
 
 for s in "${SUB_SKILLS[@]}"; do
   if [[ ! -f "$SCRIPT_DIR/skills/$s/SKILL.md" ]]; then
     echo "❌ Missing: $SCRIPT_DIR/skills/$s/SKILL.md"
-    echo "   Are you running install.sh from the cheat-on-content root?"
+    echo "   Are you running install.sh from the pattern-first root?"
     exit 1
   fi
 done
 
 skill_source() {
   local skill="$1"
-  if [[ "$skill" == "cheat-on-content" ]]; then
+  if [[ "$skill" == "pattern-first" ]]; then
     echo "$SCRIPT_DIR"
   else
     echo "$SCRIPT_DIR/skills/$skill"
@@ -184,7 +184,7 @@ install_skills() {
   mkdir -p "$target_dir"
 
   echo ""
-  echo "Installing cheat-on-content for $label (mode: $MODE)"
+  echo "Installing pattern-first for $label (mode: $MODE)"
   echo "  source: $SCRIPT_DIR"
   echo "  target: $target_dir/"
   echo ""
@@ -203,7 +203,7 @@ install_skills() {
       echo "  ✓ symlinked: $s"
     else
       cp -R "$src" "$dst"
-      if [[ "$s" == "cheat-on-content" ]]; then
+      if [[ "$s" == "pattern-first" ]]; then
         rm -rf "$dst/.git"
       fi
       echo "  ✓ copied:    $s"
@@ -248,7 +248,7 @@ echo "  2. Open Claude Code or Codex in that directory"
 echo ""
 echo "  3. In the chat, say:"
 echo "       init"
-echo "       (or: init cheat-on-content)"
+echo "       (or: init pattern-first)"
 echo ""
 if [[ "$TARGET_AGENT" == "claude" || "$TARGET_AGENT" == "all" ]]; then
   echo "Verify Claude install: ls -la ~/.claude/skills/ | grep cheat"

@@ -423,5 +423,5 @@ User gives a new topic → back to Phase 1 to re-route.
 - Upstream: `/cheat-status` prompts "you haven't filmed yet—run /cheat-seed?" when `pool_status=none + >24h since init`
 - Downstream: the user's candidate → candidates.md (tier1, deep_read)
 - Downstream: (default) draft → Phase 4.5 humanizer de-AI-ify → scripts/<id>.md → user rewrites → /cheat-predict
-- Optional dependency: the [`humanizer`](https://github.com/blader/humanizer) skill (MIT, external project). When installed at `~/.claude/skills/humanizer/`, Phase 4.5 auto-enables it; when not installed, gracefully skip. **Not bundled into cheat-on-content**—the user clones it themselves
+- Optional dependency: the [`humanizer`](https://github.com/blader/humanizer) skill (MIT, external project). When installed at `~/.claude/skills/humanizer/`, Phase 4.5 auto-enables it; when not installed, gracefully skip. **Not bundled into pattern-first**—the user clones it themselves
 - Difference from `/cheat-trends`: cheat-seed is **discuss + write a draft** (conversation-heavy); cheat-trends is **multi-adapter fetch + rough score** (fetch-heavy). They serve different purposes and don't replace each other.

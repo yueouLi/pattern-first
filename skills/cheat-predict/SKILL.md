@@ -1,6 +1,6 @@
 ---
 name: cheat-predict
-description: Write an immutable blind-prediction log for the final draft. This is the core action of cheat-on-content's whole calibration loop—once the prediction section is written it's immutable, enforced by a hook. **Auto-detection**: if the target file already has a `## Prediction` / `## Prediction v1` section (called by cheat-shoot in v2 mode), switch to appending `## Prediction v2` rather than overwriting. **Scoring is delegated via the Task tool to the `cheat-score-blind` sub-agent** (context-isolated channel B); the main Claude writes to disk after review. Triggers: "start prediction" / "score and predict this draft" / "write the prediction log".
+description: Write an immutable blind-prediction log for the final draft. This is the core action of pattern-first's whole calibration loop—once the prediction section is written it's immutable, enforced by a hook. **Auto-detection**: if the target file already has a `## Prediction` / `## Prediction v1` section (called by cheat-shoot in v2 mode), switch to appending `## Prediction v2` rather than overwriting. **Scoring is delegated via the Task tool to the `cheat-score-blind` sub-agent** (context-isolated channel B); the main Claude writes to disk after review. Triggers: "start prediction" / "score and predict this draft" / "write the prediction log".
 argument-hint: <script-path> [— mode: v1|v2] [— prediction-file: <path>] [— skip-blind]
 allowed-tools: Bash(*), Read, Write, Edit, Glob, Task
 ---
@@ -79,7 +79,7 @@ The path the user gives **should be** `scripts/<date>_<id>_<short>.md`. If not u
 |---|---|
 | `scripts/<date>_<id>_<short>.md` | standard path, use directly |
 | `<id>` or `<short>` shorthand | glob `scripts/*_<id>_*.md` or `scripts/*<short>*.md` to find the match |
-| any external .md file (e.g. `~/Desktop/my-draft.md`) | **warn + ask**: "recommend putting the draft at scripts/<date>_<id>_<short>.md for cheat-on-content to manage. Want me to cp it over and compute the id?" user agrees → create the standard path then continue |
+| any external .md file (e.g. `~/Desktop/my-draft.md`) | **warn + ask**: "recommend putting the draft at scripts/<date>_<id>_<short>.md for pattern-first to manage. Want me to cp it over and compute the id?" user agrees → create the standard path then continue |
 | `videos/<id>/` path (user mistakes the video folder for where the draft lives) | prompt "the video folder is created after shooting—the pre-shoot draft is in scripts/. Which draft do you want to predict?" |
 
 If scripts/<id>.md doesn't exist → error and ask "where is the draft you want to predict?"

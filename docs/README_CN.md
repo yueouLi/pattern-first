@@ -1,8 +1,8 @@
 <h1 align="center">
-  <img src="logo.svg" alt="Cheat on Content" width="720">
+  <img src="logo.svg" alt="Pattern First" width="720">
 </h1>
 
-<h2 align="center">Cheat on Content</h2>
+<h2 align="center">Pattern First</h2>
 
 <p align="center">
 网红作弊器 — 把每一条内容变成可校准的实验。
@@ -107,8 +107,8 @@
 ## 📦 安装
 
 ```bash
-git clone https://github.com/XBuilderLAB/cheat-on-content.git
-cd cheat-on-content
+git clone https://github.com/XBuilderLAB/pattern-first.git
+cd pattern-first
 bash install.sh
 ```
 
@@ -129,7 +129,7 @@ bash install.sh
 在你的内容项目目录里打开支持 skill 的 agent，说：
 
 ```
-初始化 cheat-on-content
+初始化 pattern-first
 ```
 
 5 个 yes/no 搞定 onboarding。**强烈建议导对标账号**——5-10 条样本 → 工具立刻有 anchor，不然前 5 篇预测精度 ±50%。
@@ -155,8 +155,8 @@ bash install.sh
 
 ## 📈 Star History
 
-<a href="https://star-history.com/#XBuilderLAB/cheat-on-content&Date">
-  <img src="https://api.star-history.com/svg?repos=XBuilderLAB/cheat-on-content&type=Date" alt="Star History Chart" width="720">
+<a href="https://star-history.com/#XBuilderLAB/pattern-first&Date">
+  <img src="https://api.star-history.com/svg?repos=XBuilderLAB/pattern-first&type=Date" alt="Star History Chart" width="720">
 </a>
 
 ---

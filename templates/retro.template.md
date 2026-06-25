@@ -5,7 +5,7 @@
 >
 > Example data is from the video-analysis project's "stop expecting" retro (the retro section of [predictions/2026-04-24_ab61ed09_stop-expecting.md]).
 >
-> Full spec: see the "retro section" part of [shared-references/prediction-anatomy.md](../cheat-on-content/shared-references/prediction-anatomy.md).
+> Full spec: see the "retro section" part of [shared-references/prediction-anatomy.md](../pattern-first/shared-references/prediction-anatomy.md).
 
 ---
 

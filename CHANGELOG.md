@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to cheat-on-content will be documented here.
+All notable changes to pattern-first will be documented here.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [SemVer](https://semver.org/).
 
@@ -30,11 +30,11 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versio
 - **Doesn't contaminate calibration**: a cheat-seed draft is not the thing being predicted/published—cheat-predict scores the user's final draft; humanizing the first draft just gives a cleaner starting point
 - **Doesn't rewrite for the user**: humanizer de-AI-ifying ≠ becoming the user's voice; the "must rewrite" warning still holds
 
-humanizer is **not bundled** into cheat-on-content—the user `git clone`s it themselves to `~/.claude/skills/humanizer/`.
+humanizer is **not bundled** into pattern-first—the user `git clone`s it themselves to `~/.claude/skills/humanizer/`.
 
-### Fixed — douyin-session runtime path privacy hole (@level5Ninja [#16](https://github.com/yueouLi/cheat-on-content-en/pull/16))
+### Fixed — douyin-session runtime path privacy hole (@level5Ninja [#16](https://github.com/yueouLi/pattern-first/pull/16))
 
-**Problem**: the douyin-session adapter wrote `.auth/` (**containing the Douyin login cookie**), debug screenshots, and reports into the **skill source directory** rather than the user's content project—with a symlink install, the user's session credentials would land inside the cheat-on-content repo, at risk of being committed. The meta-logging hook also stored the first 120 chars of every user prompt into `usage.jsonl`, over-collecting.
+**Problem**: the douyin-session adapter wrote `.auth/` (**containing the Douyin login cookie**), debug screenshots, and reports into the **skill source directory** rather than the user's content project—with a symlink install, the user's session credentials would land inside the pattern-first repo, at risk of being committed. The meta-logging hook also stored the first 120 chars of every user prompt into `usage.jsonl`, over-collecting.
 
 **Fix**:
 - Added `adapters/perf-data/douyin-session/paths.py` — a runtime path helper (`runtime_project_root` / `auth_dir` / `debug_dir` / `videos_dir`), using the `CHEAT_PROJECT_ROOT` env var + cwd fallback
@@ -96,7 +96,7 @@ Run `bash tools/diff_pct_test.sh` to reproduce.
 
 ### Added — Blind scoring sub-agent (channel B isolation)
 
-**Problem**: cheat-on-content's 7/9-dimension scoring was originally done inline in the main conversation—but the main Claude has already seen the user's conversation, the actuals, and the retro-section history; scoring was contaminated. It's especially severe in `/cheat-bump` Phase 2 when re-scoring the calibration pool—rank consistency may overfit rather than reflect true signal.
+**Problem**: pattern-first's 7/9-dimension scoring was originally done inline in the main conversation—but the main Claude has already seen the user's conversation, the actuals, and the retro-section history; scoring was contaminated. It's especially severe in `/cheat-bump` Phase 2 when re-scoring the calibration pool—rank consistency may overfit rather than reflect true signal.
 
 **Change**: introduced [skills/cheat-score-blind](skills/cheat-score-blind/SKILL.md) as a **channel B** isolated scoring sub-agent. The three-channel model:
 - **A** = main conversation: decisions / writing retros / interacting with the user
@@ -142,7 +142,7 @@ The README install section changed from the dual "### Claude Code" + "### Codex"
 ### Added — Terminal-style logo SVG
 
 - `docs/logo.svg` (1.9KB native SVG, no image-asset dependency)
-- terminal window + traffic lights + `$ fatesnail` command line + 5-phase loop + `// cheat on content` comment
+- terminal window + traffic lights + `$ fatesnail` command line + 5-phase loop + `// pattern first` comment
 - centered in the README hero
 
 ### Added — cheat-seed Mode refactor + dual trend-tool integration
@@ -192,9 +192,9 @@ The user's real workflow: finish a draft → **often ad-lib the script while fil
 
 The v2 system makes "post-shoot script change" a first-class citizen: v1 stays as the archive, v2 re-judges based on the actual filmed script, and diff(v1, v2) itself becomes strong evidence for rubric upgrades (the user rewrote the script to be higher ER → the tool learns this user's ER threshold is inconsistent with the current formula). The blind-prediction principle is preserved: v2 is still completed before publishing, with no play data to "cheat" with.
 
-### Added — Codex install compatibility (@songth1ef [#6](https://github.com/yueouLi/cheat-on-content-en/pull/6))
+### Added — Codex install compatibility (@songth1ef [#6](https://github.com/yueouLi/pattern-first/pull/6))
 
-- **`install.sh --codex`**: installs the root router skill `cheat-on-content` and 13 sub-skills into `~/.codex/skills/`
+- **`install.sh --codex`**: installs the root router skill `pattern-first` and 13 sub-skills into `~/.codex/skills/`
 - **`install.sh --all`**: installs both the Claude Code and Codex skills
 - **`uninstall.sh --codex` / `--all`**: symmetric uninstall of Codex or the dual install
 - **Codex routing note**: Codex triggers the same flow via natural language, not relying on Claude Code's `/cheat-*` slash-command harness
@@ -220,7 +220,7 @@ The state of v0.1.0 users is schema 1.1. If later we change field semantics, del
 
 ### Changed — README rewrite (positioning adjustment after the v0.1.0 ship)
 
-- title: `Cheat on Content`, subtitle reworded
+- title: `Pattern First`, subtitle reworded
 - tagline faces the "cheating" frame head-on: "Making content is fundamentally cheating—whoever sees through the pattern first takes the traffic"
 - added the "but can't ChatGPT / Doubao / DeepSeek do this too?" section—core positioning as "your own ops expert + auto-evolving"
 - removed the early-product warning section (the badge + this CHANGELOG already convey it; repeating is a lack of confidence)

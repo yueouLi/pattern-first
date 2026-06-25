@@ -1,6 +1,6 @@
-# Workflow quick-reference (cheat-on-content)
+# Workflow quick-reference (pattern-first)
 
-> This is the quick-reference doc `/cheat-init` creates at your project root. The full spec is in cheat-on-content's `SKILL.md` and `shared-references/`.
+> This is the quick-reference doc `/cheat-init` creates at your project root. The full spec is in pattern-first's `SKILL.md` and `shared-references/`.
 > This file is for when you "forget what to say next"—you don't need to read it cover to cover.
 
 ---
@@ -117,7 +117,7 @@ If met, run:
 "upgrade rubric --propose 'ER weight 1.5→2.0, add the MS dimension'"
 ```
 
-A bump is a high-risk operation—it runs 5-step validation (including a cross-model independent audit). See `cheat-on-content/shared-references/bump-validation-protocol.md`.
+A bump is a high-risk operation—it runs 5-step validation (including a cross-model independent audit). See `pattern-first/shared-references/bump-validation-protocol.md`.
 
 ---
 
@@ -175,7 +175,7 @@ Say "status" anytime to output:
 │   ├── prediction-immutability.sh
 │   ├── session-start.sh
 │   └── log-event.sh
-├── .claude/settings.json    # contains the cheat-on-content hooks
+├── .claude/settings.json    # contains the pattern-first hooks
 │
 ├── scripts/                 # **all pre-shoot drafts**
 │   └── YYYY-MM-DD_<id>_<short>.md   # written by cheat-seed or the user
@@ -205,6 +205,6 @@ The three use the same `<date>_<id>_<short>` naming; `<id>` is the first-12 sha2
 
 ## Stuck?
 
-- See the "requests you must refuse" section of `cheat-on-content/SKILL.md`—what you want to do may be exactly what's designed to be refused
-- See the corresponding sub-skill's `cheat-on-content/skills/cheat-X/SKILL.md`
+- See the "requests you must refuse" section of `pattern-first/SKILL.md`—what you want to do may be exactly what's designed to be refused
+- See the corresponding sub-skill's `pattern-first/skills/cheat-X/SKILL.md`
 - Run "status" to see cheat-status's "recommended next steps"

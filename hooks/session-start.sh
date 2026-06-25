@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 #
-# cheat-on-content SessionStart hook
+# pattern-first SessionStart hook
 #
 # Renders a 4-6 line status report at the start of every Claude Code session.
 # Output is added to Claude's system context — Claude sees it before first reply.
 #
 # Silently exits if:
-#   - Not in a cheat-on-content project (no .cheat-state.json)
+#   - Not in a pattern-first project (no .cheat-state.json)
 #   - jq not available (status is markdown-readable; Claude can read state.json directly)
 #
 # Format:
@@ -21,7 +21,7 @@ set -uo pipefail
 PROJECT_DIR="${CLAUDE_PROJECT_DIR:-.}"
 STATE_FILE="$PROJECT_DIR/.cheat-state.json"
 
-# Silently skip if not a cheat-on-content project
+# Silently skip if not a pattern-first project
 if [[ ! -f "$STATE_FILE" ]]; then
   exit 0
 fi
@@ -29,7 +29,7 @@ fi
 # Skip if jq missing (Claude can still read state.json himself in conversation)
 if ! command -v jq >/dev/null 2>&1; then
   cat <<'EOF'
-[cheat-on-content] SessionStart: jq not installed — skipping auto status report.
+[pattern-first] SessionStart: jq not installed — skipping auto status report.
 Claude can still read .cheat-state.json directly. Say "status" for full status.
 EOF
   exit 0
@@ -182,7 +182,7 @@ fi
 
 # --- Build the report ---
 echo ""
-echo "[cheat-on-content / SessionStart status report]"
+echo "[pattern-first / SessionStart status report]"
 echo ""
 echo "$buffer_label"
 echo "$retro_label"

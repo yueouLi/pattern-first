@@ -196,6 +196,6 @@ The acknowledgments section is the core propagation vehicle of **some samples**,
 
 ## Maintenance suggestions
 
-- **Keep < 500 lines**—append new patterns after each retro, but also periodically delete refuted old patterns (same lifecycle protocol as rubric_notes.md—see [observation-lifecycle.md](../cheat-on-content/shared-references/observation-lifecycle.md))
+- **Keep < 500 lines**—append new patterns after each retro, but also periodically delete refuted old patterns (same lifecycle protocol as rubric_notes.md—see [observation-lifecycle.md](../pattern-first/shared-references/observation-lifecycle.md))
 - **Each new pattern must have ≥1-sample support**—a single-point observation goes in the bottom "newly discovered Patterns" section first, ≥2 to be promoted
 - Each pattern **must be traceable to a specific video** + data (don't write "the opening hook is important", write "my video X used an IS parody opening, T+7d 710k")

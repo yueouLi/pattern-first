@@ -1,6 +1,6 @@
 # Migrations Registry
 
-The single source of truth for cheat-on-content's schema-version evolution. `/cheat-migrate` reads this file to decide which migrations to run.
+The single source of truth for pattern-first's schema-version evolution. `/cheat-migrate` reads this file to decide which migrations to run.
 
 ---
 

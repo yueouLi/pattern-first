@@ -229,7 +229,7 @@ Well-performing video durations (the reference creator, 3-5min range):
 
 ## Maintenance suggestions
 
-- **Keep < 500 lines**—append new patterns after each retro, but also periodically delete refuted old patterns (same lifecycle protocol as rubric_notes.md—see [observation-lifecycle.md](../cheat-on-content/shared-references/observation-lifecycle.md))
+- **Keep < 500 lines**—append new patterns after each retro, but also periodically delete refuted old patterns (same lifecycle protocol as rubric_notes.md—see [observation-lifecycle.md](../pattern-first/shared-references/observation-lifecycle.md))
 - **After the 5th retro**: completely rewrite all the "example"-marked patterns above into your account's tested ones—the examples just show you the format, not the truth
 - **A new pattern must have ≥1-sample support**—a single-point observation goes in the bottom "to be verified" section first, ≥2 to be promoted
 - Each pattern **must be traceable to a specific video** + data (don't write "the opening hook is important", write "the reference creator's stop-expecting used an IS parody opening, T+7d 710k")

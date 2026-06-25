@@ -3,7 +3,7 @@
 > **This file is written by `/cheat-trends` with trend-fetch results, and read and ranked by `/cheat-recommend`.
 > Can also be hand-edited—just paste candidate titles as H3 entries.**
 >
-> Full schema spec: [shared-references/candidate-schema.md](../cheat-on-content/shared-references/candidate-schema.md).
+> Full schema spec: [shared-references/candidate-schema.md](../pattern-first/shared-references/candidate-schema.md).
 
 ---
 

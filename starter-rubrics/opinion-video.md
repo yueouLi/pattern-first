@@ -187,7 +187,7 @@ Set yourself a time when scoring a new draft. The point is to **give a judgment 
 
 ---
 
-## Mapping to the `cheat-on-content` sub-skills
+## Mapping to the `pattern-first` sub-skills
 
 This starter rubric is read by:
 - `/cheat-init` cold-start mode → copies this file to `rubric_notes.md` by default (or, in calibration mode where the mode allows the v2 formula)

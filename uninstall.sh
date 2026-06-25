@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #
-# cheat-on-content / uninstall.sh
+# pattern-first / uninstall.sh
 #
-# Removes the 14 cheat-on-content skills from Claude Code and/or Codex skill dirs.
+# Removes the 14 pattern-first skills from Claude Code and/or Codex skill dirs.
 #
 # Does NOT touch any content project's data (.cheat-state.json, predictions/,
 # rubric_notes.md, candidates.md, etc.) — those live in your content directories
@@ -35,7 +35,7 @@ SUB_SKILLS=(
 )
 
 CLAUDE_SKILLS=("${SUB_SKILLS[@]}")
-CODEX_SKILLS=(cheat-on-content "${SUB_SKILLS[@]}")
+CODEX_SKILLS=(pattern-first "${SUB_SKILLS[@]}")
 
 TARGET_AGENT="claude"
 for arg in "$@"; do
@@ -69,7 +69,7 @@ remove_skills() {
   shift 2
 
   echo ""
-  echo "Removing cheat-on-content from $label:"
+  echo "Removing pattern-first from $label:"
   echo "  target: $target_dir/"
   echo ""
 
@@ -108,5 +108,5 @@ echo "Note: your content projects' data (predictions/, rubric_notes.md, .cheat-s
 echo "      .cheat-hooks/, candidates.md, etc.) are NOT touched. They live in each content"
 echo "      project directory. To clean a specific content project, delete those files manually."
 echo ""
-echo "To re-install: bash install.sh [--codex|--all] (from cheat-on-content source root)"
+echo "To re-install: bash install.sh [--codex|--all] (from pattern-first source root)"
 echo ""
